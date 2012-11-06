@@ -1,4 +1,8 @@
 BugCenter::Application.routes.draw do
+  #Define the route for the static pages
+  get "static_pages/home"
+  get "static_pages/help"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
