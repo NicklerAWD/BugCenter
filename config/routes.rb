@@ -2,6 +2,7 @@ BugCenter::Application.routes.draw do
 
   #Define resources
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   #Define the route for the root pages
   root to: 'static_pages#home'
   #Define the route for the static pages
@@ -11,6 +12,10 @@ BugCenter::Application.routes.draw do
 
   #Define the route for users
   match '/signup',  to: 'users#new'
+
+  #Define the route of the session
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
