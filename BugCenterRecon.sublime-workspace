@@ -8,26 +8,18 @@
 	"buffers":
 	[
 		{
-			"file": "Gemfile",
+			"file": "app/assets/stylesheets/custom.css.scss",
 			"settings":
 			{
-				"buffer_size": 931,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "README.rdoc",
-			"settings":
-			{
-				"buffer_size": 9208,
-				"line_ending": "Unix"
+				"buffer_size": 1265,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1913,
+				"buffer_size": 2001,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +27,7 @@
 			"file": "app/controllers/static_pages_controller.rb",
 			"settings":
 			{
-				"buffer_size": 110,
+				"buffer_size": 132,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,7 +35,7 @@
 			"file": "app/views/static_pages/home.html.erb",
 			"settings":
 			{
-				"buffer_size": 162,
+				"buffer_size": 393,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,32 +43,24 @@
 			"file": "spec/requests/static_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1186,
+				"buffer_size": 919,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/static_pages/contact.html.erb",
+			"settings":
+			{
+				"buffer_size": 185,
+				"line_ending": "Windows",
+				"name": "<% provide(:title, 'Contact') %>"
 			}
 		},
 		{
 			"file": "app/views/static_pages/help.html.erb",
 			"settings":
 			{
-				"buffer_size": 252,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/static_pages/about.html.erb",
-			"settings":
-			{
-				"buffer_size": 277,
-				"line_ending": "Windows",
-				"name": "<h1>About Us</h1>"
-			}
-		},
-		{
-			"file": "app/controllers/application_controller.rb",
-			"settings":
-			{
-				"buffer_size": 80,
+				"buffer_size": 282,
 				"line_ending": "Unix"
 			}
 		},
@@ -84,7 +68,42 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 260,
+				"buffer_size": 423,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/_shim.html.erb",
+			"settings":
+			{
+				"buffer_size": 105,
+				"line_ending": "Windows",
+				"name": "<!--[if lt IE 9]>"
+			}
+		},
+		{
+			"file": "app/views/layouts/_header.html.erb",
+			"settings":
+			{
+				"buffer_size": 412,
+				"line_ending": "Windows",
+				"name": "<header class=\"navbar navbar-fixed-top\">"
+			}
+		},
+		{
+			"file": "app/views/layouts/_footer.html.erb",
+			"settings":
+			{
+				"buffer_size": 341,
+				"line_ending": "Windows",
+				"name": "<header class=\"navbar navbar-fixed-top\">"
+			}
+		},
+		{
+			"file": "app/helpers/application_helper.rb",
+			"settings":
+			{
+				"buffer_size": 240,
 				"line_ending": "Unix"
 			}
 		}
@@ -92,7 +111,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 81.0,
 		"selected_items":
 		[
 			[
@@ -120,7 +139,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -137,6 +156,12 @@
 	},
 	"file_history":
 	[
+		"/C/Temp/BugCenter/spec/support/utilies.rb",
+		"/C/Temp/BugCenter/app/views/static_pages/about.html.erb",
+		"/C/Temp/BugCenter/app/controllers/application_controller.rb",
+		"/C/Temp/BugCenter/README.rdoc",
+		"/C/Temp/BugCenter/Gemfile",
+		"/C/Temp/BugCenter/Guardfile"
 	],
 	"find":
 	{
@@ -154,6 +179,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'\n",
+			"Center",
+			"do"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -171,28 +199,28 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Gemfile",
+					"file": "app/assets/stylesheets/custom.css.scss",
 					"settings":
 					{
-						"buffer_size": 931,
+						"buffer_size": 1265,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								672,
-								672
+								1265,
+								1265
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -202,46 +230,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "README.rdoc",
-					"settings":
-					{
-						"buffer_size": 9208,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8990,
-								8990
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3105.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 1913,
+						"buffer_size": 2001,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								156,
-								156
+								109,
+								109
 							]
 						],
 						"settings":
@@ -257,19 +257,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "app/controllers/static_pages_controller.rb",
 					"settings":
 					{
-						"buffer_size": 110,
+						"buffer_size": 132,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								105,
-								105
+								121,
+								121
 							]
 						],
 						"settings":
@@ -283,19 +283,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "app/views/static_pages/home.html.erb",
 					"settings":
 					{
-						"buffer_size": 162,
+						"buffer_size": 393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28,
-								28
+								393,
+								393
 							]
 						],
 						"settings":
@@ -309,24 +309,53 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "spec/requests/static_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 1186,
+						"buffer_size": 919,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1181,
-								1181
+								904,
+								904
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/static_pages/contact.html.erb",
+					"settings":
+					{
+						"buffer_size": 185,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								185,
+								185
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<% provide(:title, 'Contact') %>",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -339,15 +368,15 @@
 					"file": "app/views/static_pages/help.html.erb",
 					"settings":
 					{
-						"buffer_size": 252,
+						"buffer_size": 282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								251,
-								251
+								24,
+								24
 							]
 						],
 						"settings":
@@ -362,24 +391,25 @@
 				},
 				{
 					"buffer": 7,
-					"file": "app/views/static_pages/about.html.erb",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 277,
+						"buffer_size": 423,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								277,
-								277
+								357,
+								357
 							]
 						],
 						"settings":
 						{
-							"auto_name": "<h1>About Us</h1>",
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -389,23 +419,24 @@
 				},
 				{
 					"buffer": 8,
-					"file": "app/controllers/application_controller.rb",
+					"file": "app/views/layouts/_shim.html.erb",
 					"settings":
 					{
-						"buffer_size": 80,
+						"buffer_size": 105,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								105,
+								105
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"auto_name": "<!--[if lt IE 9]>",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -415,23 +446,81 @@
 				},
 				{
 					"buffer": 9,
-					"file": "app/views/layouts/application.html.erb",
+					"file": "app/views/layouts/_header.html.erb",
 					"settings":
 					{
-						"buffer_size": 260,
+						"buffer_size": 412,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								260,
-								260
+								412,
+								412
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"auto_name": "<header class=\"navbar navbar-fixed-top\">",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/views/layouts/_footer.html.erb",
+					"settings":
+					{
+						"buffer_size": 341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								341,
+								341
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<header class=\"navbar navbar-fixed-top\">",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/helpers/application_helper.rb",
+					"settings":
+					{
+						"buffer_size": 240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								174,
+								174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -473,6 +562,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
 	"replace":
 	{
 		"height": 0.0
