@@ -31,6 +31,9 @@ end
 gem 'jquery-rails'
 gem 'wdm', '~> 0.0.3'
 gem 'bcrypt-ruby'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :test do
   gem 'capybara', '1.1.2'
