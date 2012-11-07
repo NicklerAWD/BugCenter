@@ -1,6 +1,7 @@
 BugCenter::Application.routes.draw do
-  get "users/new"
 
+  #Define resources
+  resources :users
   #Define the route for the root pages
   root to: 'static_pages#home'
   #Define the route for the static pages
