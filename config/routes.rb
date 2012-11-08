@@ -3,6 +3,7 @@ BugCenter::Application.routes.draw do
   #Define resources
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   #Define the route for the root pages
   root to: 'static_pages#home'
   #Define the route for the static pages
