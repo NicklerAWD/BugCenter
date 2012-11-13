@@ -1,5 +1,6 @@
 <% provide(:title, "Home") %>
 <% if signed_in? %>
+  <!-- if the user is signed-in -->
   <div class="row">
     <aside class="span4">
       <section>
@@ -18,6 +19,7 @@
     </div>
   </div>  
 <% else %>
+  <!-- If the user si not sign-in -->
   <div class="center hero-unit">
     <h1>Welcome to the <br/> Recon Instruments Center</h1>
 
