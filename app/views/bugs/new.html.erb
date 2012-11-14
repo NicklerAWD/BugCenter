@@ -1,2 +1,42 @@
-<h1>Bugs#new</h1>
-<p>Find me in app/views/bugs/new.html.erb</p>
+<!--#  bug_title   :string(255)
+#  bug_type    :string(255)
+#  version     :string(255)
+#  product     :string(255)
+#  description :text(255)
+#  steps       :text(255)
+#  priority    :string(255)-->
+
+<% provide(:title, 'Bug Report') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@bug) do |f| %>
+
+      <%= f.label :bug_title %>
+      <%= f.text_field :bug_title %>
+
+      <%= f.label :bug_type %>
+      <%= f.text_field :bug_type %>
+
+      <%= f.label :version %>
+      <%= f.text_field :version %>
+
+      <%= f.label :product %>
+      <%= f.text_field :product %>
+
+      <%= f.label :priority %>
+      <%= f.text_field :priority %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+
+      <%= f.label "Steps to reproduce the bug, if it's possible" %>
+      <%= f.text_field :steps %>
+
+
+      <%= f.submit "Create the bug", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

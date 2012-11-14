@@ -73,6 +73,7 @@ before_filter :admin_user,     only: :destroy
       @user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)
     end
+    
     def admin_user
       redirect_to(root_path) unless current_user.admin?
     end
