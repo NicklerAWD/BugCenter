@@ -1,7 +1,5 @@
 BugCenter::Application.routes.draw do
 
-  get "bugs/new"
-
   #Define resources
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -26,6 +24,9 @@ BugCenter::Application.routes.draw do
   #Define the route of the session
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
+  #Define the route for bugs
+  match '/bugreport', to: 'bugs#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

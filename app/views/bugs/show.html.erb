@@ -1,5 +1,5 @@
-<% provide(:title, @bug.bug_title ) %>
 <% if current_user.admin? %>
+	<% provide(:title, @bug.bug_title ) %>
 	<span style="text-decoration:underline;">Bug Title:</span>  <%= @bug.bug_title %><br/>
 	<span style="text-decoration:underline;">Bug Type:</span>  <%= @bug.bug_type %>
 	<span style="text-decoration:underline;margin-left:30px;">Product:</span>  <%= @bug.product %>
@@ -9,4 +9,8 @@
 	<div style="width:100%;height:50px;border:1px solid blue;"><%= @bug.description %></div>
 	<span style="text-decoration:underline;">Steps to reproduce:</span>
 	<div style="width:100%;height:50px;border:1px solid blue;"><%= @bug.steps %></div>
+	<%= @bug.user_id %>
+<% else %>
+	<% provide(:title, "403" ) %>
+	<h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
 <% end %>

@@ -5,38 +5,42 @@
 #  description :text(255)
 #  steps       :text(255)
 #  priority    :string(255)-->
+<% if current_user.admin? %>
+  <% provide(:title, 'Bug Report') %>
+  <h1>Please report your annoying little thing to daddy</h1>
 
-<% provide(:title, 'Bug Report') %>
-<h1>Sign up</h1>
+  <div class="row">
+    <div class="span6 offset3">
+      <%= form_for(@bug) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :bug_title %>
+        <%= f.text_field :bug_title %>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@bug) do |f| %>
+        <%= f.label :bug_type %>
+        <%= f.collection_select :bug_type, Bug::BUGTYPE, :to_s, :to_s, :include_blank => false %>
 
-      <%= f.label :bug_title %>
-      <%= f.text_field :bug_title %>
+        <%= f.label :priority %>
+        <%= f.collection_select :priority, Bug::PRIORITY, :to_s, :to_s, :include_blank => false %>
 
-      <%= f.label :bug_type %>
-      <%= f.text_field :bug_type %>
+        <%= f.label :product %>
+        <%= f.text_field :product %>
 
-      <%= f.label :version %>
-      <%= f.text_field :version %>
+        <%= f.label :version %>
+        <%= f.text_field :version %>
 
-      <%= f.label :product %>
-      <%= f.text_field :product %>
-
-      <%= f.label :priority %>
-      <%= f.text_field :priority %>
-
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-
-
-      <%= f.label "Steps to reproduce the bug, if it's possible" %>
-      <%= f.text_field :steps %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
 
 
-      <%= f.submit "Create the bug", class: "btn btn-large btn-primary" %>
-    <% end %>
+        <%= f.label "Steps to reproduce the bug, if it's possible" %>
+        <%= f.text_field :steps %>
+
+
+        <%= f.submit "Create the bug", class: "btn btn-large btn-primary" %>
+      <% end %>
+    </div>
   </div>
-</div>
+<% else %>
+  <% provide(:title, "403" ) %>
+  <h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
+<% end %>

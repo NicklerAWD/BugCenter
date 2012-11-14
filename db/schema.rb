@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121113034029) do
+ActiveRecord::Schema.define(:version => 20121114061941) do
 
   create_table "bugs", :force => true do |t|
     t.string   "bug_title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20121113034029) do
     t.string   "priority"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.integer  "user_id"
   end
 
   create_table "microposts", :force => true do |t|
