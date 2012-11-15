@@ -5,7 +5,7 @@
 #  description :text(255)
 #  steps       :text(255)
 #  priority    :string(255)-->
-<% if current_user.admin? %>
+<% if current_user.authouser? %>
   <% provide(:title, 'Bug Report') %>
   <h1>Please report your annoying little thing to daddy</h1>
 
@@ -29,11 +29,11 @@
         <%= f.text_field :version %>
 
         <%= f.label :description %>
-        <%= f.text_field :description %>
+        <%= f.text_area :description, :size => 5 %>
 
 
         <%= f.label "Steps to reproduce the bug, if it's possible" %>
-        <%= f.text_field :steps %>
+        <%= f.text_area :steps %>
 
 
         <%= f.submit "Create the bug", class: "btn btn-large btn-primary" %>
@@ -42,5 +42,5 @@
   </div>
 <% else %>
   <% provide(:title, "403" ) %>
-  <h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
+  <h2>Sorry, you don't have the rights. Please contact the administrators.</h2>
 <% end %>

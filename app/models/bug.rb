@@ -24,7 +24,7 @@ class Bug < ActiveRecord::Base
   validates :bug_type, presence: true,  length: { maximum: 50 }
   validates :description, presence: true
   validates :version, presence: true,  length: { maximum: 50 }
-  validates :steps, presence: true
+  #validates :steps, presence: true
   validates :priority, presence: true,  length: { maximum: 50 }
   validates :product, presence: true, length: { maximum: 50 }
   validates :user_id, presence: true
