@@ -9,7 +9,7 @@
 	<div style="width:100%;min-height=50px;height:auto;border:1px solid blue;"><%= @bug.description %></div>
 	<span style="text-decoration:underline;">Steps to reproduce:</span>
 	<div style="width:100%;min-height=50px;height:auto;border:1px solid blue;"><%= @bug.steps %></div>
-	<%= @bug.user_id %>
+	<%= User.find(@bug.user_id).name %>
 <% else %>
 	<% provide(:title, "403" ) %>
 	<h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
