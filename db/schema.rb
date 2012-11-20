@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121115222957) do
+ActiveRecord::Schema.define(:version => 20121120075546) do
 
   create_table "bugs", :force => true do |t|
     t.string   "bug_title"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20121115222957) do
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
     t.boolean  "authouser",       :default => false
+    t.boolean  "intuser",         :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

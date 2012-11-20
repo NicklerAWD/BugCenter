@@ -79,6 +79,10 @@ before_filter :admin_user,     only: :destroy
     end
 
     def autho_user
-      redirect_to(root_path) unless current_user.admin?
+      redirect_to(root_path) unless current_user.authouser?
+    end
+
+    def int_user
+      redirect_to(root_path) unless current_user.intuser?
     end
 end

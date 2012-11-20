@@ -5,7 +5,7 @@
 #  description :text(255)
 #  steps       :text(255)
 #  priority    :string(255)-->
-<% if current_user.authouser? %>
+<% if current_user.authouser? || current_user.intuser? %>
   <% provide(:title, 'Bug Report') %>
   <h1>Please report your annoying little thing to daddy</h1>
 

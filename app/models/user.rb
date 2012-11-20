@@ -10,6 +10,7 @@
 #  password_digest :string(255)
 #  remember_token  :string(255)
 #  admin           :boolean          default(FALSE)
+#  authouser       :boolean          default(FALSE)
 #
 
 class User < ActiveRecord::Base

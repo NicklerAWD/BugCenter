@@ -1,16 +1,19 @@
-<% if current_user.authouser? %>
-	<% provide(:title, @bug.bug_title ) %>
-	<span style="text-decoration:underline;">Bug Title:</span>  <%= @bug.bug_title %><br/>
-	<span style="text-decoration:underline;">Bug Type:</span>  <%= @bug.bug_type %>
-	<span style="text-decoration:underline;margin-left:30px;">Product:</span>  <%= @bug.product %>
-	<span style="text-decoration:underline;margin-left:30px;">Version:</span>  <%= @bug.version %>
-	<span style="text-decoration:underline;margin-left:30px;">Priority:</span>  <%= @bug.priority %><br/>
-	<span style="text-decoration:underline;">Description:</span>
-	<div style="width:100%;min-height=50px;height:auto;border:1px solid blue;"><%= @bug.description %></div>
-	<span style="text-decoration:underline;">Steps to reproduce:</span>
-	<div style="width:100%;min-height=50px;height:auto;border:1px solid blue;"><%= @bug.steps %></div>
-	<%= User.find(@bug.user_id).name %>
-<% else %>
-	<% provide(:title, "403" ) %>
-	<h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
+<% if signed_in? %>
+	<% if current_user.authouser? || current_user.intuser? %>
+		<% provide(:title, @bug.bug_title ) %>
+		<span style="text-decoration:underline;">Bug Title:</span>  <%= @bug.bug_title %>
+		<span style="text-decoration:underline;">By:</span> <%= User.find(@bug.user_id).name %>
+		<br/>
+		<span style="text-decoration:underline;">Bug Type:</span>  <%= @bug.bug_type %>
+		<span style="text-decoration:underline;margin-left:30px;">Product:</span>  <%= @bug.product %>
+		<span style="text-decoration:underline;margin-left:30px;">Version:</span>  <%= @bug.version %>
+		<span style="text-decoration:underline;margin-left:30px;">Priority:</span>  <%= @bug.priority %><br/>
+		<span style="text-decoration:underline;">Description:</span>
+		<div style="width:100%;min-height=50px;height:auto;border:1px solid black;"><%= @bug.description %></div>
+		<span style="text-decoration:underline;">Steps to reproduce:</span>
+		<div style="width:100%;min-height=50px;height:auto;border:1px solid blue;"><%= @bug.steps %></div>
+	<% else %>
+		<% provide(:title, "403" ) %>
+		<h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
+	<% end %>
 <% end %>
