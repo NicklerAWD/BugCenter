@@ -12,6 +12,8 @@
 		<div style="width:100%;min-height=50px;height:auto;border:1px solid black;"><%= @bug.description %></div>
 		<span style="text-decoration:underline;">Steps to reproduce:</span>
 		<div style="width:100%;min-height=50px;height:auto;border:1px solid black;"><%= @bug.steps %></div>
+		<br/>
+		<%= button_to "Edit the bug", edit_bug_path, :method => "get", class: "btn btn-large btn-primary" %>
 	<% else %>
 		<% provide(:title, "403" ) %>
 		<h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
