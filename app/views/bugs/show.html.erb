@@ -13,7 +13,10 @@
 		<span style="text-decoration:underline;">Steps to reproduce:</span>
 		<div style="width:100%;min-height=50px;height:auto;border:1px solid black;"><%= @bug.steps %></div>
 		<br/>
-		<%= button_to "Edit the bug", edit_bug_path, :method => "get", class: "btn btn-large btn-primary" %>
+		<!-- if the user is an internal user or the user reports the bug then allowed the edit --> 
+		<% if current_user.intuser? || current_user.id == @bug.user_id %>
+			<%= button_to "Edit the bug", edit_bug_path, :method => "get", class: "btn btn-large btn-primary" %>
+		<% end %>
 	<% else %>
 		<% provide(:title, "403" ) %>
 		<h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
