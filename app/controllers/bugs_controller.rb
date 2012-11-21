@@ -23,4 +23,18 @@ class BugsController < ApplicationController
   def index
     @bugs = Bug.paginate(page: params[:page])
   end
+
+  def edit
+    @bug = Bug.find(params[:id])
+  end
+
+  def update
+    @bug = Bug.find(params[:id])
+    if @bug.update_attributes(params[:bug])
+      flash[:success] = "Bug updated"
+      redirect_to @bug
+    else
+      render 'edit'
+    end
+  end
 end
