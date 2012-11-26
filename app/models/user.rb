@@ -11,6 +11,7 @@
 #  remember_token  :string(255)
 #  admin           :boolean          default(FALSE)
 #  authouser       :boolean          default(FALSE)
+#  intuser         :boolean          default(FALSE)
 #
 
 class User < ActiveRecord::Base

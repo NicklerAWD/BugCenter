@@ -1,5 +1,7 @@
 BugCenter::Application.routes.draw do
 
+  get "products/new"
+
   #Define resources
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -11,6 +13,7 @@ BugCenter::Application.routes.draw do
   end
   resources :relationships, only: [:create, :destroy]
   resources :bugs
+  resources :products
   #Define the route for the root pages
   root to: 'static_pages#home'
   #Define the route for the static pages
@@ -27,6 +30,9 @@ BugCenter::Application.routes.draw do
 
   #Define the route for bugs
   match '/bugreport', to: 'bugs#new'
+
+  #Define the route for products
+  match '/productnew', to:'products#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

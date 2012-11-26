@@ -1,0 +1,38 @@
+<!-- 
+# == Schema Information
+#
+# Table name: products
+#
+#  id            :integer          not null, primary key
+#  product_name  :string(255)
+#  version       :string(255)
+#  release_notes :text
+#  active        :boolean          default(FALSE)
+#  internal      :boolean          default(FALSE)
+-->
+
+<% if current_user.admin? %>
+  <% provide(:title, 'Create a new product') %>
+  <h1>Create a new product</h1>
+
+  <div class="row">
+    <div class="span6 offset3">
+      <%= form_for(@product) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :product_name %>
+        <%= f.collection_select :product_name, Product::PRODUCTNAME, :to_s, :to_s, :include_blank => false %>
+
+        <%= f.label :version %>
+        <%= f.text_field :version %>
+
+        <%= f.label :release_notes %>
+        <%= f.text_area :release_notes%>
+
+        <%= f.submit "Create the version", class: "btn btn-large btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <% provide(:title, "403" ) %>
+  <h2>Sorry, you don't have the rights. Please contact the administrators.</h2>
+<% end %>

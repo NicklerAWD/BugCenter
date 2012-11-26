@@ -1,34 +1,39 @@
-<% provide(:title, "Edit bug") %> 
-<h1>Update your bug</h1>
+<% if current_user.intuser? || current_user.id == @bug.user_id %>
+    <% provide(:title, "Edit bug") %> 
+    <h1>Update your bug</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@bug) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-        <%= f.label :bug_title %>
-        <%= f.text_field :bug_title %>
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for(@bug) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+            <%= f.label :bug_title %>
+            <%= f.text_field :bug_title %>
 
-        <%= f.label :bug_type %>
-        <%= f.collection_select :bug_type, Bug::BUGTYPE, :to_s, :to_s, :include_blank => false %>
+            <%= f.label :bug_type %>
+            <%= f.collection_select :bug_type, Bug::BUGTYPE, :to_s, :to_s, :include_blank => false %>
 
-        <%= f.label :priority %>
-        <%= f.collection_select :priority, Bug::PRIORITY, :to_s, :to_s, :include_blank => false %>
+            <%= f.label :priority %>
+            <%= f.collection_select :priority, Bug::PRIORITY, :to_s, :to_s, :include_blank => false %>
 
-        <%= f.label :product %>
-        <%= f.text_field :product %>
+            <%= f.label :product %>
+            <%= f.text_field :product %>
 
-        <%= f.label :version %>
-        <%= f.text_field :version %>
+            <%= f.label :version %>
+            <%= f.text_field :version %>
 
-        <%= f.label :description %>
-        <%= f.text_area :description, :size => 5 %>
-
-
-        <%= f.label "Steps to reproduce the bug, if it's possible" %>
-        <%= f.text_area :steps %>
+            <%= f.label :description %>
+            <%= f.text_area :description, :size => 5 %>
 
 
-        <%= f.submit "Update the bug", class: "btn btn-large btn-primary" %>
-    <% end %>
-  </div>
-</div>
+            <%= f.label "Steps to reproduce the bug, if it's possible" %>
+            <%= f.text_area :steps %>
+
+
+            <%= f.submit "Update the bug", class: "btn btn-large btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+<% else %>
+    <% provide(:title, "403" ) %>
+    <h2>Sorry, you don't have the rights. Please contact the adminstrators.</h2>
+<% end %>

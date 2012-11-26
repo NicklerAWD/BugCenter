@@ -1,0 +1,14 @@
+<% provide(:title, @product.version) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @product.product_name %> - <%= @product.version %>
+      </h1>
+    </section>
+    <section>
+      Release Notes: <br>
+      <%= @product.release_notes %>
+    </section>
+  </aside>
+</div>
