@@ -1,10 +1,15 @@
-<% provide(:title, 'All bugs') %>
-<h1>All bugs</h1>
+<% if current_user.authouser? || current_user.intuser? %>
+	<% provide(:title, 'All bugs') %>
+	<h1>All bugs</h1>
 
-<%= will_paginate %>
+	<%= will_paginate %>
 
-<ul class="bugs">
-  <%= render @bugs %>
-</ul>
+	<ul class="bugs">
+	  <%= render @bugs %>
+	</ul>
 
-<%= will_paginate %>
+	<%= will_paginate %>
+<% else %>
+	<% provide(:title, "403" ) %>
+	<h2>Sorry, you don't have the rights. Please contact the administrators.</h2>
+<% end %>
