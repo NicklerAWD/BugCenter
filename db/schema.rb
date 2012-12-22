@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121126011059) do
+ActiveRecord::Schema.define(:version => 20121221235413) do
 
   create_table "bugs", :force => true do |t|
     t.string   "bug_title"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20121126011059) do
 
   add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
 
+  create_table "product_infos", :force => true do |t|
+    t.string   "product_name"
+    t.string   "version"
+    t.text     "release_notes"
+    t.boolean  "active"
+    t.boolean  "internal"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "products", :force => true do |t|
     t.string   "product_name"
     t.string   "version"
@@ -55,6 +65,14 @@ ActiveRecord::Schema.define(:version => 20121126011059) do
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
+  create_table "surveys", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "result"
+    t.text     "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

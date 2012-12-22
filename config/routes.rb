@@ -1,5 +1,7 @@
 BugCenter::Application.routes.draw do
 
+  get "surveys/new"
+
   get "products/new"
 
   #Define resources
