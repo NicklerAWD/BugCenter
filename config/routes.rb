@@ -1,11 +1,10 @@
 BugCenter::Application.routes.draw do
 
-  get "surveys/new"
-
-  get "products/new"
+  #get "surveys/new"
+  #get "products/new"
 
   #Define resources
-  resources :users
+  #resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :users do
@@ -16,6 +15,7 @@ BugCenter::Application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :bugs
   resources :products
+  resources :surveys
   #Define the route for the root pages
   root to: 'static_pages#home'
   #Define the route for the static pages
@@ -35,6 +35,9 @@ BugCenter::Application.routes.draw do
 
   #Define the route for products
   match '/productnew', to:'products#new'
+
+  #Define the route for the surveys
+  match '/startsurvey', to:'surveys#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
