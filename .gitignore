@@ -16,3 +16,6 @@
 
 #ignore the Gemlock
 /*.lock
+
+#ignore the s3 credential for security reason
+/config/locales/s3.yml
